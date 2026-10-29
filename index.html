@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Friv 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="marquee-wrap">
+      <div class="marquee-text">JUEGOS</div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <img src="images/nobg/gato1.png" alt="" class="floating-cat zig-1">
+    <img src="images/nobg/gato2.png" alt="" class="floating-cat zig-2">
+    <img src="images/nobg/gato3.png" alt="" class="floating-cat zig-3">
+    <img src="images/nobg/gato4.png" alt="" class="floating-cat zig-4">
+    <img src="images/nobg/gato5.png" alt="" class="floating-cat zig-5">
+    <img src="images/nobg/gato6.png" alt="" class="floating-cat zig-6">
+
+    <h1 class="logo">
+      <span class="letter">F</span><span class="letter">R</span><span class="letter">I</span><span class="letter">V</span>
+      <br>
+      <span class="letter two">2</span>
+    </h1>
+
+    <p class="description">
+      Bienvenido a Friv 2, el mejor sitio de juegos para alumnos.
+      Acá vas a encontrar una selección de juegos rápidos y divertidos,
+      pensados para jugar entre clase y clase sin complicarte.
+      Elegí un juego, hacé clic y a divertirse.
+    </p>
+
+    <div class="search-row">
+      <input type="text" id="search-input" class="search-bar" placeholder="Buscar juegos...">
+      <button id="search-btn" class="search-btn">&#128269;</button>
+    </div>
+
+    <h2 class="section-title">Juegos</h2>
+
+    <div class="games-section">
+      <img src="images/rayos.jpg" alt="" class="games-bg">
+
+      <div id="no-results" class="no-results">
+        <p class="no-results-text">😿 Juego no encontrado</p>
+        <p class="no-results-sub">Quizás te interesen estos:</p>
+        <div id="recommendations" class="recommendations"></div>
+      </div>
+
+      <div class="games-grid" id="games-grid">
+
+        <div class="game-card-wrapper" data-title="Ben 10 Game">
+          <img src="images/nobg/gato2.png" alt="" class="game-bg-char">
+          <a href="https://scratch.mit.edu/projects/1206065561/fullscreen/" target="_blank" class="game-card">
+            <img src="images/covers/juego1_cover.png" alt="" class="game-cover">
+            <span class="game-title">Ben 10 Game</span>
+          </a>
+          <div class="game-desc">Ponete el Omnitrix y enfrentá la aventura con los héroes de Ben 10.</div>
+        </div>
+
+        <div class="game-card-wrapper" data-title="Juego de la pelota">
+          <img src="images/nobg/gato4.png" alt="" class="game-bg-char">
+          <a href="https://scratch.mit.edu/projects/409551080/fullscreen/" target="_blank" class="game-card">
+            <img src="images/covers/pelota_naranja.png" alt="" class="game-cover">
+            <span class="game-title">Juego de la pelota</span>
+          </a>
+          <div class="game-desc">Guiá la pelota naranja por el camino sin caerte al vacío.</div>
+        </div>
+
+        <div class="game-card-wrapper" data-title="Space Pong">
+          <img src="images/nobg/gato5.png" alt="" class="game-bg-char">
+          <a href="https://scratch.mit.edu/projects/1089298842/fullscreen/" target="_blank" class="game-card">
+            <img src="images/covers/space_pong.png" alt="Space Pong" class="game-cover">
+            <span class="game-title game-title-hidden">Space Pong</span>
+          </a>
+          <div class="game-desc">El clásico Pong llevado al espacio: rebotá la pelota y no dejes que pase.</div>
+        </div>
+
+        <div class="game-card-wrapper" data-title="Restaurante Busetinni">
+          <img src="images/nobg/gato3.png" alt="" class="game-bg-char">
+          <a href="https://scratch.mit.edu/projects/1320380514/fullscreen/" target="_blank" class="game-card">
+            <img src="images/covers/restaurante.png" alt="" class="game-cover">
+            <span class="game-title">Restaurante Busetinni</span>
+          </a>
+          <div class="game-desc">Entrá al restaurante y descubrí qué te espera en esta aventura.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
