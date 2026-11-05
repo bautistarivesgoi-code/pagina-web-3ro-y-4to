@@ -5,6 +5,41 @@ const noResults = document.getElementById('no-results');
 const recommendationsBox = document.getElementById('recommendations');
 const allTitles = cards.map(c => c.dataset.title);
 
+const menuToggle = document.getElementById('menu-toggle');
+const gameMenu = document.getElementById('game-menu');
+const menuClose = document.getElementById('menu-close');
+const menuBackdrop = document.getElementById('menu-backdrop');
+
+function setMenuOpen(isOpen) {
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú de juegos' : 'Abrir menú de juegos');
+  gameMenu.classList.toggle('is-open', isOpen);
+  gameMenu.setAttribute('aria-hidden', String(!isOpen));
+  gameMenu.inert = !isOpen;
+  menuBackdrop.hidden = !isOpen;
+  document.body.classList.toggle('menu-open', isOpen);
+
+  if (isOpen) {
+    menuClose.focus();
+  } else {
+    menuToggle.focus();
+  }
+}
+
+menuToggle.addEventListener('click', () => {
+  setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+});
+menuClose.addEventListener('click', () => setMenuOpen(false));
+menuBackdrop.addEventListener('click', () => setMenuOpen(false));
+gameMenu.querySelectorAll('.menu-game-link').forEach(link => {
+  link.addEventListener('click', () => setMenuOpen(false));
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+    setMenuOpen(false);
+  }
+});
+
 function renderRecommendations(query) {
   recommendationsBox.innerHTML = '';
   // recomienda los títulos más parecidos (o todos si no hay nada parecido)
@@ -51,6 +86,6 @@ function runSearch() {
 
 searchInput.addEventListener('input', runSearch);
 searchBtn.addEventListener('click', runSearch);
-searchInput.addEventListener('keydown', e => {
-  if (e.key === 'Enter') runSearch();
+searchInput.addEventListener('keydown', event => {
+  if (event.key === 'Enter') runSearch();
 });

@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Friv 2</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +12,23 @@
     <div class="marquee-wrap">
       <div class="marquee-text">JUEGOS</div>
     </div>
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú de juegos" aria-controls="game-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+      <span class="menu-toggle-label">Juegos</span>
+    </button>
   </header>
+
+  <div id="menu-backdrop" class="menu-backdrop" hidden></div>
+  <nav id="game-menu" class="game-menu" aria-label="Menú de juegos" aria-hidden="true" inert>
+    <div class="game-menu-header">
+      <h2>Elegí un juego</h2>
+      <button id="menu-close" class="menu-close" type="button" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <a class="menu-game-link" href="https://scratch.mit.edu/projects/1206065561/fullscreen/" target="_blank" rel="noopener noreferrer">Ben 10 Game <span aria-hidden="true">↗</span></a>
+    <a class="menu-game-link" href="https://scratch.mit.edu/projects/409551080/fullscreen/" target="_blank" rel="noopener noreferrer">Juego de la pelota <span aria-hidden="true">↗</span></a>
+    <a class="menu-game-link" href="https://scratch.mit.edu/projects/1089298842/fullscreen/" target="_blank" rel="noopener noreferrer">Space Pong <span aria-hidden="true">↗</span></a>
+    <a class="menu-game-link" href="https://scratch.mit.edu/projects/1320380514/fullscreen/" target="_blank" rel="noopener noreferrer">Restaurante Busetinni <span aria-hidden="true">↗</span></a>
+  </nav>
 
   <main class="page">
 
@@ -37,7 +54,7 @@
 
     <div class="search-row">
       <input type="text" id="search-input" class="search-bar" placeholder="Buscar juegos...">
-      <button id="search-btn" class="search-btn">&#128269;</button>
+      <button id="search-btn" class="search-btn" type="button" aria-label="Buscar juegos">&#128269;</button>
     </div>
 
     <h2 class="section-title">Juegos</h2>
@@ -55,7 +72,7 @@
 
         <div class="game-card-wrapper" data-title="Ben 10 Game">
           <img src="imagenes/gato2.png" alt="" class="game-bg-char">
-          <a href="https://scratch.mit.edu/projects/1206065561/fullscreen/" target="_blank" class="game-card">
+          <a href="https://scratch.mit.edu/projects/1206065561/fullscreen/" target="_blank" rel="noopener noreferrer" class="game-card">
             <img src="imagenes/juego1_cover.png" alt="" class="game-cover">
             <span class="game-title">Ben 10 Game</span>
           </a>
@@ -64,7 +81,7 @@
 
         <div class="game-card-wrapper" data-title="Juego de la pelota">
           <img src="imagenes/gato4.png" alt="" class="game-bg-char">
-          <a href="https://scratch.mit.edu/projects/409551080/fullscreen/" target="_blank" class="game-card">
+          <a href="https://scratch.mit.edu/projects/409551080/fullscreen/" target="_blank" rel="noopener noreferrer" class="game-card">
             <img src="imagenes/pelota_naranja.png" alt="" class="game-cover">
             <span class="game-title">Juego de la pelota</span>
           </a>
@@ -73,7 +90,7 @@
 
         <div class="game-card-wrapper" data-title="Space Pong">
           <img src="imagenes/gato5.png" alt="" class="game-bg-char">
-          <a href="https://scratch.mit.edu/projects/1089298842/fullscreen/" target="_blank" class="game-card">
+          <a href="https://scratch.mit.edu/projects/1089298842/fullscreen/" target="_blank" rel="noopener noreferrer" class="game-card">
             <img src="imagenes/space_pong.png" alt="Space Pong" class="game-cover">
             <span class="game-title game-title-hidden">Space Pong</span>
           </a>
@@ -82,7 +99,7 @@
 
         <div class="game-card-wrapper" data-title="Restaurante Busetinni">
           <img src="imagenes/gato3.png" alt="" class="game-bg-char">
-          <a href="https://scratch.mit.edu/projects/1320380514/fullscreen/" target="_blank" class="game-card">
+          <a href="https://scratch.mit.edu/projects/1320380514/fullscreen/" target="_blank" rel="noopener noreferrer" class="game-card">
             <img src="imagenes/restaurante.png" alt="" class="game-cover">
             <span class="game-title">Restaurante Busetinni</span>
           </a>
