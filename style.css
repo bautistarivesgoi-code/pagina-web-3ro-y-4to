@@ -10,12 +10,12 @@ body {
   color: #033;
   background-color: #0e8aa8;
   background-image:
-    linear-gradient(rgba(4, 60, 74, 0.55), rgba(4, 60, 74, 0.55)),
-    url("imagenes/background.jpg");
+    linear-gradient(rgba(4, 60, 74, 0.22), rgba(4, 60, 74, 0.32)),
+    url("./imagenes/background.jpg");
   background-size: cover, cover;
   background-attachment: fixed, fixed;
   background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
+  background-position: center center, center center;
 }
 
 /* ---------- BARRA SUPERIOR ---------- */
